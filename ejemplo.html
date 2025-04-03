@@ -1,0 +1,19 @@
+<h1 id="numero" style="margin: auto">1</h1>
+<script>
+    ejecutarConRetraso();
+    async function ejecutarConRetraso() {
+    for (let i = 0; i < 100000; i++) {
+        console.log(`Iteración ${i + 1}`);
+        document.getElementById("numero").innerHTML = i;
+        if(i==99998){
+            i = 0;
+        }
+        // Esperar 5 segundos antes de la siguiente iteración
+        await new Promise(resolve => setTimeout(resolve, 1)); 
+    }
+
+    console.log("✅ Bucle terminado");
+}
+   
+
+</script>
